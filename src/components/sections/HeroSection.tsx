@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
+import Image from 'next/image'
 
 const HeroSection = () => {
   const [email, setEmail] = useState('')
@@ -23,9 +24,9 @@ const HeroSection = () => {
   }
 
   return (
-<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
       {/* Content */}
-      <div className="relative z-10  text-center lg:text-left">
+      <div className="relative z-10 text-center lg:text-left">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Content */}
@@ -84,11 +85,14 @@ const HeroSection = () => {
 
           {/* Right Content - Motorcycle Image */}
           <div className="relative lg:block">
-            <div className="relative">
-              <img
-                src="./hero-img.webp"
+            <div className="relative h-[100vh]">
+              <Image
+                src="/hero-img.webp"
                 alt="Motorcycle rider"
-                className="w-full h-[100vh] object-cover rounded-lg shadow-2xl animate-fade-in [clip-path:polygon(20%_0,100%_0,100%_100%,0%_100%)]"
+                fill
+                priority
+                className="object-cover rounded-lg shadow-2xl animate-fade-in [clip-path:polygon(20%_0,100%_0,100%_100%,0%_100%)]"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               {/* Optional overlay for better integration */}
               <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white/10 rounded-lg"></div>

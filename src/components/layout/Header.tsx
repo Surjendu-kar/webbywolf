@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 
 interface NavItem {
   label: string
@@ -42,25 +43,25 @@ const Header = () => {
           
           {/* Logo */}
           <div className="flex-shrink-0 bg-[#DBDBDB] px-8 py-2">
-            <a 
+            <Link 
               href="/" 
-              className="font-roboto-condensed text-2xl lg:text-3xl font-bold tracking-tight-2 transition-colors duration-300 text-brand-text"
+              className="font-roboto-condensed text-2xl lg:text-3xl font-bold text-brand-text"
             >
               LOGO
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8 mr-36">
+          <div className="hidden lg:flex items-center space-x-8 mr-32">
             {navItems.map((item, index) => (
-              <a
+              <Link
                 key={index}
                 href={item.href}
                 className="flex items-center space-x-1 font-inter font-medium transition-all duration-300 hover:scale-105 text-brand-primary hover:text-brand-secondary"
               >
                 <span>{item.label}</span>
                 <ChevronDown className="w-4 h-4" />
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -68,7 +69,7 @@ const Header = () => {
           <div className="hidden lg:block">
             <Button
               variant="default"
-              className="px-8 shadow-lg font-inter font-semibold transition-all duration-300 hover:-translate-y-0.5 text-black bg-white hover:text-white hover:bg-black"
+              className="px-10 shadow-lg text-md font-inter font-semibold transition-all duration-300 hover:-translate-y-0.5 bg-white hover:text-white hover:bg-black"
             >
               Sign In
             </Button>
@@ -100,7 +101,7 @@ const Header = () => {
           <div className="bg-white/95 backdrop-blur-md rounded-lg mt-4 p-4 shadow-lg">
             <div className="space-y-4">
               {navItems.map((item, index) => (
-                <a
+                <Link
                   key={index}
                   href={item.href}
                   className="flex items-center justify-between py-2 font-inter font-medium text-brand-text hover:text-brand-primary transition-colors duration-200"
@@ -108,7 +109,7 @@ const Header = () => {
                 >
                   <span>{item.label}</span>
                   <ChevronDown className="w-4 h-4" />
-                </a>
+                </Link>
               ))}
             </div>
             
