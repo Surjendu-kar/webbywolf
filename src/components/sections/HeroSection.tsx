@@ -26,17 +26,17 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
       {/* Content */}
-      <div className="relative z-10 text-center lg:text-left">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 w-full pt-16 lg:pt-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           
           {/* Left Content */}
-          <div className="space-y-8 pl-12">
+          <div className="space-y-8 px-4 lg:pl-12 text-center lg:text-left">
             <div className="space-y-6">
-              <h1 className="font-roboto-condensed text-4xl md:text-5xl lg:text-[56px] font-bold tracking-tight-2 leading-tight text-brand-text animate-fade-in">
+              <h1 className="font-roboto-condensed text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold tracking-tight-2 leading-tight text-brand-text animate-fade-in">
                 Lorem ipsum dolor sit amet
               </h1>
               
-              <p className="font-inter text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl animate-slide-up">
+              <p className="font-inter text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0 animate-slide-up">
                 Lorem ipsum dolor sit amet consectetur. Enim metus cras congue quis elit 
                 sociis. Sed mi rhoncus id habitant. In urna tellus nisl platea morbi libero 
                 imperdiet neque. Justo suspendisse tristique posuere quis eget viterra. 
@@ -46,7 +46,7 @@ const HeroSection = () => {
 
             {/* Newsletter Form */}
             <div className="space-y-4 animate-slide-up">
-              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md">
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto lg:mx-0">
                 <div className="flex-1">
                   <Input
                     type="email"
@@ -74,7 +74,7 @@ const HeroSection = () => {
               </form>
               
               {/* No Credit Card Required */}
-              <div className="flex items-center gap-2 text-gray-600">
+              <div className="flex items-center gap-2 text-gray-600 justify-center lg:justify-start">
                 <div className="w-5 h-5 bg-brand-primary rounded-full flex items-center justify-center flex-shrink-0">
                   <Check className="w-3 h-3 text-white" />
                 </div>
@@ -84,14 +84,14 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Motorcycle Image */}
-          <div className="relative lg:block">
-            <div className="relative h-[100vh]">
+          <div className="relative">
+            <div className="relative h-[50vh] lg:h-[100vh] w-full">
               <Image
                 src="/hero-img.webp"
                 alt="Motorcycle rider"
                 fill
                 priority
-                className="object-cover rounded-lg shadow-2xl animate-fade-in [clip-path:polygon(20%_0,100%_0,100%_100%,0%_100%)]"
+                className="object-cover rounded-lg shadow-2xl animate-fade-in md:[clip-path:polygon(20%_0,100%_0,100%_100%,0%_100%)]"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               {/* Optional overlay for better integration */}
@@ -102,7 +102,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden lg:flex">
         <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
         </div>

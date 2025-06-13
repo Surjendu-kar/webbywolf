@@ -38,14 +38,14 @@ const Header = () => {
           : 'bg-transparent'
       }`}
     >
-    <nav className="container mx-auto ">
+    <nav className="container mx-auto">
           <div className="flex items-center justify-between h-16 lg:h-20">
           
           {/* Logo */}
-          <div className="flex-shrink-0 bg-[#DBDBDB] px-8 py-2">
+          <div className="flex-shrink-0 bg-[#DBDBDB] px-4 md:px-6 lg:px-8 py-2">
             <Link 
               href="/" 
-              className="font-roboto-condensed text-2xl lg:text-3xl font-bold text-brand-text"
+              className="font-roboto-condensed text-xl md:text-2xl lg:text-3xl font-bold text-brand-text"
             >
               LOGO
             </Link>
@@ -79,9 +79,7 @@ const Header = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2 transition-colors duration-300 ${
-                isScrolled ? 'text-brand-text' : 'text-white'
-              }`}
+              className="p-2 transition-colors duration-300 text-black"
             >
               {isMobileMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -94,12 +92,12 @@ const Header = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
-            isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+          className={`fixed left-0 right-0 top-16 lg:hidden transition-all duration-300 ${
+            isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
           }`}
         >
-          <div className="bg-white/95 backdrop-blur-md rounded-lg mt-4 p-4 shadow-lg">
-            <div className="space-y-4">
+          <div className="bg-white/95 backdrop-blur-md px-4 pb-2 shadow-lg">
+            <div className="space-y-3">
               {navItems.map((item, index) => (
                 <Link
                   key={index}
@@ -114,10 +112,10 @@ const Header = () => {
             </div>
             
             {/* Mobile Sign In Button */}
-            <div className="pt-4 border-t border-gray-200 mt-4">
+            <div className="pt-3 border-t border-gray-200 mt-3">
               <Button
                 variant="outline"
-                className="w-full border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white font-inter font-semibold"
+                className="w-full shadow-sm py-2 bg-white hover:text-white hover:bg-black font-inter font-semibold transition-all duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Sign In
