@@ -27,10 +27,10 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
       {/* Content */}
       <div className="relative z-10 w-full pt-16 md:pt-20 lg:pt-0">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
           
           {/* Left Content */}
-          <div className="space-y-8 px-4 lg:pl-12 text-center lg:text-left">
+          <div className="space-y-8 px-4 lg:pl-28 text-center lg:text-left">
             <div className="space-y-6">
               <h1 className="font-roboto-condensed text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold tracking-tight-2 leading-tight text-brand-text animate-fade-in">
                 Lorem ipsum dolor sit amet

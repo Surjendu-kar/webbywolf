@@ -69,7 +69,7 @@ const Header = () => {
           <div className="hidden md:block">
             <Button
               variant="default"
-              className="px-10 shadow-lg text-md font-inter font-semibold transition-all duration-300 hover:-translate-y-0.5 bg-white hover:text-white hover:bg-black"
+              className="px-10 shadow-md lg:shadow-lg text-md font-inter font-semibold transition-all duration-300 hover:-translate-y-0.5 bg-white hover:text-white hover:bg-black"
             >
               Sign In
             </Button>
