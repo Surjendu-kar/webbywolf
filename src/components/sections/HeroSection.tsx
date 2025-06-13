@@ -23,30 +23,19 @@ const HeroSection = () => {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')`
-        }}
-      >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
-      </div>
-
+<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
       {/* Content */}
-      <div className="relative z-10 container-custom text-center lg:text-left">
+      <div className="relative z-10  text-center lg:text-left">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 pl-12">
             <div className="space-y-6">
-              <h1 className="font-roboto-condensed text-4xl md:text-5xl lg:text-[56px] font-bold tracking-tight-2 leading-tight text-white animate-fade-in">
+              <h1 className="font-roboto-condensed text-4xl md:text-5xl lg:text-[56px] font-bold tracking-tight-2 leading-tight text-brand-text animate-fade-in">
                 Lorem ipsum dolor sit amet
               </h1>
               
-              <p className="font-inter text-lg md:text-xl text-white/90 leading-relaxed max-w-2xl animate-slide-up">
+              <p className="font-inter text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl animate-slide-up">
                 Lorem ipsum dolor sit amet consectetur. Enim metus cras congue quis elit 
                 sociis. Sed mi rhoncus id habitant. In urna tellus nisl platea morbi libero 
                 imperdiet neque. Justo suspendisse tristique posuere quis eget viterra. 
@@ -64,7 +53,7 @@ const HeroSection = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="h-12 bg-white/90 backdrop-blur-sm border-white/20 focus:border-brand-primary focus:bg-white text-brand-text placeholder:text-gray-500"
+                    className="h-12 bg-white border-gray-300 focus:border-brand-primary text-brand-text placeholder:text-gray-500"
                   />
                 </div>
                 <Button
@@ -84,7 +73,7 @@ const HeroSection = () => {
               </form>
               
               {/* No Credit Card Required */}
-              <div className="flex items-center gap-2 text-white/80">
+              <div className="flex items-center gap-2 text-gray-600">
                 <div className="w-5 h-5 bg-brand-primary rounded-full flex items-center justify-center flex-shrink-0">
                   <Check className="w-3 h-3 text-white" />
                 </div>
@@ -93,17 +82,25 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Content - Image space (empty in this design) */}
-          <div className="hidden lg:block">
-            {/* This space is for the motorcycle image which is part of the background */}
+          {/* Right Content - Motorcycle Image */}
+          <div className="relative lg:block">
+            <div className="relative">
+              <img
+                src="./hero-img.webp"
+                alt="Motorcycle rider"
+                className="w-full h-[100vh] object-cover rounded-lg shadow-2xl animate-fade-in [clip-path:polygon(20%_0,100%_0,100%_100%,0%_100%)]"
+              />
+              {/* Optional overlay for better integration */}
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white/10 rounded-lg"></div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
+        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

@@ -41,7 +41,7 @@ const Header = () => {
           <div className="flex items-center justify-between h-16 lg:h-20">
           
           {/* Logo */}
-          <div className="flex-shrink-0 bg-[#DBDBDB] px-4 py-2">
+          <div className="flex-shrink-0 bg-[#DBDBDB] px-8 py-2">
             <a 
               href="/" 
               className="font-roboto-condensed text-2xl lg:text-3xl font-bold tracking-tight-2 transition-colors duration-300 text-brand-text"
@@ -67,8 +67,8 @@ const Header = () => {
           {/* Sign In Button */}
           <div className="hidden lg:block">
             <Button
-              variant="outline"
-              className="font-inter font-semibold transition-all duration-300 hover:-translate-y-0.5 text-black bg-white hover:text-white hover:bg-black"
+              variant="default"
+              className="px-8 shadow-lg font-inter font-semibold transition-all duration-300 hover:-translate-y-0.5 text-black bg-white hover:text-white hover:bg-black"
             >
               Sign In
             </Button>
