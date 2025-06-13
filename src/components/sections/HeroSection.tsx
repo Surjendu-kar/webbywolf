@@ -26,7 +26,7 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
       {/* Content */}
-      <div className="relative z-10 w-full pt-16 lg:pt-0">
+      <div className="relative z-10 w-full pt-16 md:pt-20 lg:pt-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           
           {/* Left Content */}
@@ -85,13 +85,13 @@ const HeroSection = () => {
 
           {/* Right Content - Motorcycle Image */}
           <div className="relative">
-            <div className="relative h-[50vh] lg:h-[100vh] w-full">
+            <div className="relative h-[50vh] md:h-[80vh] lg:h-[100vh] w-full">
               <Image
                 src="/hero-img.webp"
                 alt="Motorcycle rider"
                 fill
                 priority
-                className="object-cover rounded-lg shadow-2xl animate-fade-in md:[clip-path:polygon(20%_0,100%_0,100%_100%,0%_100%)]"
+                className="object-cover shadow-2xl animate-fade-in lg:[clip-path:polygon(20%_0,100%_0,100%_100%,0%_100%)]"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               {/* Optional overlay for better integration */}

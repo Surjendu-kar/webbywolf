@@ -52,7 +52,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8 mr-32">
+          <div className="hidden md:flex items-center space-x-8 mr-0 lg:mr-32">
             {navItems.map((item, index) => (
               <Link
                 key={index}
@@ -66,7 +66,7 @@ const Header = () => {
           </div>
 
           {/* Sign In Button */}
-          <div className="hidden lg:block">
+          <div className="hidden md:block">
             <Button
               variant="default"
               className="px-10 shadow-lg text-md font-inter font-semibold transition-all duration-300 hover:-translate-y-0.5 bg-white hover:text-white hover:bg-black"
@@ -76,7 +76,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 transition-colors duration-300 text-black"
@@ -92,7 +92,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed left-0 right-0 top-16 lg:hidden transition-all duration-300 ${
+          className={`fixed left-0 right-0 top-16 md:hidden transition-all duration-300 ${
             isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
           }`}
         >
