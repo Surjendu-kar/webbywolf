@@ -94,8 +94,9 @@ const HeroSection = () => {
                 className="object-cover shadow-2xl animate-fade-in lg:[clip-path:polygon(20%_0,100%_0,100%_100%,0%_100%)]"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
-              {/* Optional overlay for better integration */}
-              <div className="absolute inset-0 bg-gradient-to-l from-transparent to-white/10 rounded-lg"></div>
+              {/* Bottom blur gradient overlay */}
+              <div className="lg:[clip-path:polygon(0.35%_0,100%_0,100%_100%,0%_100%)] absolute inset-x-0 bottom-0 h-3 bg-gradient-to-t from-white/100 to-transparent backdrop-blur-sm"></div>
+              
             </div>
           </div>
         </div>
