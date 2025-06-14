@@ -25,6 +25,10 @@
 *.pem
 .vscode/settings.json
 
+# prettier
+.prettierrc
+.prettierignore
+
 # debug
 npm-debug.log*
 yarn-debug.log*
