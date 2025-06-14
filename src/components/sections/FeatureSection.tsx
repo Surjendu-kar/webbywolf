@@ -1,3 +1,4 @@
+import GradientBar from "@/components/ui/GradientBar";
 import { ArrowRight, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,7 +15,7 @@ const FeatureSection = () => {
             {/* Top blue link text */}
             <Link
               href="#"
-              className="mb-2 inline-block px-4 pt-4 font-inter text-lg font-semibold text-brand-secondary transition-colors hover:text-brand-primary lg:mb-4 lg:px-0 lg:pt-0"
+              className="mb-2 inline-block pt-4 font-inter text-lg font-semibold text-brand-secondary transition-colors hover:text-brand-primary lg:mb-4 lg:pt-0"
             >
               Lorem ipsum dolor sit
             </Link>
@@ -95,19 +96,19 @@ const FeatureSection = () => {
           </div>
 
           {/* Right content - Large motorcycle image */}
-          <div className="relative h-[300px] w-full md:h-[500px] lg:h-[700px]">
+          <div className="relative h-[400px] w-full md:h-[500px] lg:h-[700px]">
             <Image
               src="/motorcycles.webp"
               alt="Motorcycles lineup"
               fill
-              className="object-cover shadow-xl"
+              className="object-cover "
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
 
         {/* CTA Button and Phone */}
-        <div className="flex flex-col items-start gap-4 py-6 sm:flex-row sm:items-center lg:pb-8">
+        <div className="flex items-center justify-center gap-4 py-6 lg:justify-start lg:pb-8">
           <Link
             href="#"
             className="flex items-center gap-2 rounded bg-brand-primary px-8 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-secondary hover:shadow-lg"
@@ -126,7 +127,7 @@ const FeatureSection = () => {
       </div>
 
       {/* Bottom decorative bar */}
-      <div className=" h-3 w-full bg-gradient-to-r from-blue-800 via-emerald-600 to-indigo-950 "></div>
+      <GradientBar />
     </section>
   );
 };
