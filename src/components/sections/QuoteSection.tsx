@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const QuoteSection = () => {
@@ -6,12 +9,12 @@ const QuoteSection = () => {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-6xl">
           {/* Section Title */}
-          <h2 className="mb-12 text-center font-roboto-condensed text-3xl font-bold text-brand-text sm:text-4xl md:text-5xl">
+          <h2 className="mb-6 text-center font-roboto-condensed text-3xl font-bold text-brand-text md:text-5xl lg:mb-12">
             REQUEST A QUOTE
           </h2>
 
           {/* Form */}
-          <form className="space-y-6">
+          <form className="space-y-4 md:space-y-6">
             {/* Name and Email Row */}
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               <div>
@@ -21,12 +24,12 @@ const QuoteSection = () => {
                 >
                   Name
                 </label>
-                <input
+                <Input
                   type="text"
                   id="name"
                   name="name"
                   required
-                  className="w-full rounded-md border border-gray-200 bg-gray-50 px-4 py-2 font-inter text-gray-900 outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary"
+                  className="border-gray-200 bg-gray-50 py-2 font-inter"
                 />
               </div>
               <div>
@@ -36,12 +39,12 @@ const QuoteSection = () => {
                 >
                   E-mail
                 </label>
-                <input
+                <Input
                   type="email"
                   id="email"
                   name="email"
                   required
-                  className="w-full rounded-md border border-gray-200 bg-gray-50 px-4 py-2 font-inter text-gray-900 outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary"
+                  className="border-gray-200 bg-gray-50 py-2 font-inter"
                 />
               </div>
             </div>
@@ -55,12 +58,12 @@ const QuoteSection = () => {
                 >
                   Phone Number
                 </label>
-                <input
+                <Input
                   type="tel"
                   id="phone"
                   name="phone"
                   required
-                  className="w-full rounded-md border border-gray-200 bg-gray-50 px-4 py-2 font-inter text-gray-900 outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary"
+                  className="border-gray-200 bg-gray-50 py-2 font-inter"
                 />
               </div>
               <div>
@@ -147,18 +150,18 @@ const QuoteSection = () => {
             </div>
 
             {/* Terms and Privacy */}
-            <div className="text-center text-sm text-gray-600">
+            <div className="text-center text-sm text-[#3C3C3C]">
               By submitting this form you agree to our{" "}
               <Link
                 href="/terms"
-                className="font-semibold text-brand-secondary hover:text-brand-primary"
+                className="font-semibold text-[#3C3C3C] underline hover:text-[#2b2b2b]"
               >
                 Terms of Service
               </Link>{" "}
               and{" "}
               <Link
                 href="/privacy"
-                className="font-semibold text-brand-secondary hover:text-brand-primary"
+                className="font-semibold text-[#3C3C3C] underline hover:text-[#2b2b2b]"
               >
                 Privacy Policy
               </Link>
@@ -167,26 +170,13 @@ const QuoteSection = () => {
 
             {/* Submit Button */}
             <div className="text-center">
-              <button
+              <Button
                 type="submit"
-                className="inline-flex items-center rounded-md bg-brand-primary px-8 py-2 font-inter font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-secondary hover:shadow-lg"
+                className="bg-brand-primary px-8 py-2 font-inter font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-secondary hover:shadow-lg"
               >
                 Leorum Ipsum
-                <svg
-                  className="ml-2 h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
-              </button>
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
             </div>
           </form>
         </div>
