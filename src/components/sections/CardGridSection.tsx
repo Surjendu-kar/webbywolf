@@ -34,7 +34,7 @@ const CardGridSection = () => {
   ];
 
   return (
-    <section className="">
+    <section className="py-10 md:py-16">
       <div className="container mx-auto flex flex-col gap-10 px-4 md:px-0 lg:gap-16">
         {/* Section Title */}
         <div className="max-w-2xl space-y-2 md:space-y-4">
