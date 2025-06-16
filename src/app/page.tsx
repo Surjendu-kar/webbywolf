@@ -5,6 +5,7 @@ import BrandSection from "@/components/sections/BrandSection";
 import CardGridSection from "@/components/sections/CardGridSection";
 import FeatureSection from "@/components/sections/FeatureSection";
 import HeroSection from "@/components/sections/HeroSection";
+import QuoteSection from "@/components/sections/QuoteSection";
 
 function Home() {
   const bannerDescription = [
@@ -45,6 +46,9 @@ function Home() {
         title="DOLOR SIT AMET CONSECTETUR. QUIS ADIPISCING PURUS EGESTAS ALIQUAM VIVERRA MI. DOLOR SIT AMET CONSECTETUR. QUIS ADIPISCING"
         height="h-[600px]"
       />
+
+      {/* Quote Section */}
+      <QuoteSection />
     </main>
   );
 }
