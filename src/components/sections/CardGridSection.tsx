@@ -35,9 +35,9 @@ const CardGridSection = () => {
 
   return (
     <section className="">
-      <div className="container mx-auto flex flex-col gap-16">
+      <div className="container mx-auto flex flex-col gap-10 px-4 md:px-0 lg:gap-16">
         {/* Section Title */}
-        <div className="max-w-2xl space-y-4">
+        <div className="max-w-2xl space-y-2 md:space-y-4">
           <Link
             href="#"
             className="inline-block font-inter text-lg font-semibold text-brand-secondary transition-colors hover:text-brand-primary"
@@ -57,7 +57,7 @@ const CardGridSection = () => {
 
         {/* Cards Grid */}
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 gap-14 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:gap-14">
             {cards.map((card, index) => (
               <Link
                 key={index}
@@ -76,13 +76,20 @@ const CardGridSection = () => {
                   </div>
 
                   {/* Card Content */}
-                  <div className="space-y-3 p-4">
-                    <h3 className="font-inter text-lg font-semibold text-brand-text">
-                      {card.title}
-                    </h3>
-                    <p className="font-inter text-sm leading-relaxed text-gray-700">
-                      {card.description}
-                    </p>
+                  <div className="space-y-4 p-4">
+                    <div className="space-y-3">
+                      <h3 className="font-inter text-lg font-semibold text-brand-text">
+                        {card.title}
+                      </h3>
+                      <p className="font-inter text-sm leading-relaxed text-gray-700">
+                        {card.description}
+                      </p>
+                    </div>
+                    <div className="mb-3 md:mb-14">
+                      <span className="font-inter text-sm font-semibold text-brand-secondary underline transition-colors group-hover:text-brand-primary">
+                        Learn More
+                      </span>
+                    </div>
                   </div>
                 </div>
               </Link>
