@@ -1,6 +1,7 @@
 "use client";
 
 import Header from "@/components/layout/Header";
+import AppDownloadSection from "@/components/sections/AppDownloadSection";
 import Banner from "@/components/sections/Banner";
 import BenefitsSection from "@/components/sections/BenefitsSection";
 import BrandSection from "@/components/sections/BrandSection";
@@ -54,6 +55,9 @@ function Home() {
 
       {/* Quote Section */}
       <QuoteSection />
+
+      {/* App Download Section */}
+      <AppDownloadSection />
     </main>
   );
 }
