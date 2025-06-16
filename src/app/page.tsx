@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/layout/Header";
 import Banner from "@/components/sections/Banner";
 import BenefitsSection from "@/components/sections/BenefitsSection";
@@ -6,6 +8,7 @@ import CardGridSection from "@/components/sections/CardGridSection";
 import FeatureSection from "@/components/sections/FeatureSection";
 import HeroSection from "@/components/sections/HeroSection";
 import QuoteSection from "@/components/sections/QuoteSection";
+import { Toaster } from "react-hot-toast";
 
 function Home() {
   const bannerDescription = [
@@ -15,6 +18,8 @@ function Home() {
 
   return (
     <main className="min-h-screen">
+      <Toaster position="top-center" />
+
       {/* Header with transparent background */}
       <Header />
 
