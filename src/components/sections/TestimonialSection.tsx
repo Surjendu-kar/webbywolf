@@ -9,6 +9,7 @@ interface Testimonial {
   name: string;
   content: string;
   avatar: string;
+  iconSrc: string;
 }
 
 const TestimonialSection = () => {
@@ -18,28 +19,32 @@ const TestimonialSection = () => {
       name: "Jane Cooper",
       content:
         "Purus maecenas quis elit eu, aliquet. Tellus porttitor ut sollicitudin sit non fringilla. Quam nunc volutpat senectus neque eget amet pharetra, euismod. Tempus, nunc, molestie imperdiet curabitur commodo euismod.",
-      avatar: "/avatars/avatar-1.jpg",
+      avatar: "/avatar/avatar-1.png",
+      iconSrc: "/testimonial/cloud.svg",
     },
     {
       id: 2,
       name: "Ralph Edwards",
       content:
         "Vehicula sit sit pharetra bibendum ut risus accumsan. Purus, in metus, enim, ipsum morbi euismod pellentesque. Mattis pharetra accumsan eget est mi enim, id. Sit quam tortor eu tellus non, in euismod integer.",
-      avatar: "/avatars/avatar-2.jpg",
+      avatar: "/avatar/avatar-2.png",
+      iconSrc: "/testimonial/star.svg",
     },
     {
       id: 3,
       name: "Courtney Henry",
       content:
         "Viverra lacus suspendisse elit, adipiscing orci, non turpis etiam sapien. Viverra blandit sem neque pretium. Duis enim semper fermentum consequat aenean libero. Blandit porta leo condimentum dolor, nisi, aliquet ante laoreet.",
-      avatar: "/avatars/avatar-3.jpg",
+      avatar: "/avatar/avatar-3.png",
+      iconSrc: "/testimonial/king.svg",
     },
     {
       id: 4,
       name: "Cameron Williamson",
       content:
         "Hendrerit augue ut nunc quis integer netus. Sed rhoncus magnis habitasse. Egestas amet habitasse tellus ornare. Hendrerit senectus. Mauris eget vitae praesent neque.",
-      avatar: "/avatars/avatar-4.jpg",
+      avatar: "/avatar/avatar-4.png",
+      iconSrc: "/testimonial/clock.svg",
     },
   ];
 
@@ -59,7 +64,7 @@ const TestimonialSection = () => {
 
   return (
     <section className="my-20 bg-brand-secondary">
-      <div className="container mx-auto space-y-12 py-16">
+      <div className="container mx-auto flex flex-col gap-20 py-20">
         <div className="flex items-center justify-between">
           <div className="max-w-3xl text-white">
             <h2 className="text-2xl font-bold">Join other Sun harvesters</h2>
@@ -80,57 +85,64 @@ const TestimonialSection = () => {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="flex items-center justify-center gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={testimonial.id}
-                className={`flex h-[350px] w-[300px] cursor-pointer flex-col justify-between border-none bg-white transition-all duration-300 ${
-                  index === selectedCard
-                    ? "scale-110 shadow-xl"
-                    : "scale-100 hover:scale-105"
-                }`}
-                onClick={() => setSelectedCard(index)}
-              >
-                <CardContent className="pt-6">
-                  <p className="text-brand-text">{testimonial.content}</p>
-                </CardContent>
-                <CardFooter>
-                  <div className="flex items-center space-x-4">
-                    <div className="relative h-12 w-12 overflow-hidden rounded-full">
-                      <Image
-                        src={testimonial.avatar}
-                        alt={testimonial.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900">
-                        {testimonial.name}
-                      </h3>
-                    </div>
+        <div className="flex items-center justify-center gap-6">
+          {testimonials.map((testimonial, index) => (
+            <Card
+              key={testimonial.id}
+              className={`flex h-[400px] w-[300px] cursor-pointer flex-col justify-between border-none bg-white transition-all duration-300 ${
+                index === selectedCard
+                  ? "scale-110 shadow-xl"
+                  : "scale-100 hover:scale-105"
+              }`}
+              onClick={() => setSelectedCard(index)}
+            >
+              <CardContent className="pt-2">
+                <div className="mb-4 flex justify-start">
+                  <Image
+                    src={testimonial.iconSrc}
+                    alt=""
+                    width={32}
+                    height={32}
+                    className="h-12 w-12"
+                  />
+                </div>
+                <p className="text-brand-text">{testimonial.content}</p>
+              </CardContent>
+              <CardFooter>
+                <div className="flex items-center space-x-3">
+                  <div className="relative h-12 w-12 overflow-hidden rounded-full">
+                    <Image
+                      src={testimonial.avatar}
+                      alt={testimonial.name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-gray-900">
+                      {testimonial.name}
+                    </h3>
+                  </div>
+                </div>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
 
-          {/* Navigation Buttons */}
-          <div className="mt-8 flex justify-start space-x-4">
-            <button
-              onClick={handlePrevious}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-white text-gray-600 transition-colors hover:bg-gray-100"
-            >
-              <ArrowLeft className="h-5 w-5" />
-            </button>
-            <button
-              onClick={handleNext}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-white text-gray-600 transition-colors hover:bg-gray-100"
-            >
-              <ArrowRight className="h-5 w-5" />
-            </button>
-          </div>
+        {/* Navigation Buttons */}
+        <div className="flex justify-start space-x-4">
+          <button
+            onClick={handlePrevious}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-white text-gray-600 transition-colors hover:bg-gray-100"
+          >
+            <ArrowLeft className="h-5 w-5" />
+          </button>
+          <button
+            onClick={handleNext}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-white text-gray-600 transition-colors hover:bg-gray-100"
+          >
+            <ArrowRight className="h-5 w-5" />
+          </button>
         </div>
       </div>
     </section>
