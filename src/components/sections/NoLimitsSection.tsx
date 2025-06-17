@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const NoLimitsSection = () => {
   return (
-    <section className="container relative mx-auto max-h-[660px] px-4">
+    <section className="#F1F5F9 container relative mx-auto h-[660px] px-4">
       <div className="flex">
         {/* Left Content */}
         <div className="w-[400px]">
