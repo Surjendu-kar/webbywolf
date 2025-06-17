@@ -39,7 +39,7 @@ const FeatureSection = () => {
               <div className="flex gap-6">
                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden">
                   <Image
-                    src="/feature-1.webp"
+                    src="/motorcycles/motorcycles-2.webp"
                     alt="Motorcycle rider"
                     width={96}
                     height={96}
@@ -58,7 +58,7 @@ const FeatureSection = () => {
               <div className="flex gap-6">
                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden">
                   <Image
-                    src="/feature-2.webp"
+                    src="/motorcycles/motorcycles-3.webp"
                     alt="Motorcycle workshop"
                     width={96}
                     height={96}
@@ -77,7 +77,7 @@ const FeatureSection = () => {
               <div className="flex gap-6">
                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden">
                   <Image
-                    src="/feature-3.webp"
+                    src="/motorcycles/motorcycles-4.webp"
                     alt="Motorcycle service"
                     width={96}
                     height={96}
@@ -98,7 +98,7 @@ const FeatureSection = () => {
           {/* Right content - Large motorcycle image */}
           <div className="relative h-[400px] w-full md:h-[500px] lg:h-[700px]">
             <Image
-              src="/motorcycles.webp"
+              src="/motorcycles/motorcycles-1.webp"
               alt="Motorcycles lineup"
               fill
               className="object-cover "

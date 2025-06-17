@@ -60,7 +60,7 @@ const AppDownloadSection = () => {
               alt="App mockup on phone"
               width={500}
               height={500}
-              className="scale-140 h-auto w-auto translate-y-6 object-contain md:translate-y-12 md:scale-110 lg:translate-y-0 lg:scale-150"
+              className="scale-140 lg:scale-140 h-auto w-auto translate-y-6 object-contain md:translate-y-12 md:scale-110 lg:translate-y-2"
             />
           </div>
         </div>
