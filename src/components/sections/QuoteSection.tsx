@@ -48,7 +48,7 @@ const QuoteSection = () => {
       console.log("Form data:", data);
       toast.success("Form submitted successfully!");
       reset();
-    } catch (error) {
+    } catch {
       toast.error("Something went wrong. Please try again.");
     }
   };

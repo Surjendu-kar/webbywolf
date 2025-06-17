@@ -11,6 +11,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import NoLimitsSection from "@/components/sections/NoLimitsSection";
 import QuoteSection from "@/components/sections/QuoteSection";
 import SimpleSection from "@/components/sections/SimpleSection";
+import TestimonialSection from "@/components/sections/TestimonialSection";
 import { Toaster } from "react-hot-toast";
 
 function Home() {
@@ -66,6 +67,9 @@ function Home() {
 
       {/* Simple Section */}
       <SimpleSection />
+
+      {/* Testimonial Section */}
+      <TestimonialSection />
     </main>
   );
 }
