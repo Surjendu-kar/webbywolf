@@ -58,8 +58,8 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section className="container mx-auto my-20 bg-brand-secondary p-10">
-      <div className="space-y-12">
+    <section className="my-20 bg-brand-secondary">
+      <div className="container mx-auto space-y-12 py-16">
         <div className="flex items-center justify-between">
           <div className="max-w-3xl text-white">
             <h2 className="text-2xl font-bold">Join other Sun harvesters</h2>
