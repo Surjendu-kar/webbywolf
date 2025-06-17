@@ -141,7 +141,8 @@ const QuoteSection = () => {
                   htmlFor="timeFrame"
                   className="mb-2 block font-inter text-sm text-gray-700"
                 >
-                  Time Frame*
+                  Time Frame
+                  <span className="text-red-500">*</span>
                 </label>
                 <select
                   {...register("timeFrame")}
@@ -171,7 +172,8 @@ const QuoteSection = () => {
                   htmlFor="size"
                   className="mb-2 block font-inter text-sm text-gray-700"
                 >
-                  Size*
+                  Size
+                  <span className="text-red-500">*</span>
                 </label>
                 <select
                   {...register("size")}
@@ -196,7 +198,8 @@ const QuoteSection = () => {
                   htmlFor="quantity"
                   className="mb-2 block font-inter text-sm text-gray-700"
                 >
-                  Quantity*
+                  Quantity
+                  <span className="text-red-500">*</span>
                 </label>
                 <select
                   {...register("quantity")}
@@ -225,7 +228,8 @@ const QuoteSection = () => {
                 htmlFor="description"
                 className="mb-2 block font-inter text-sm text-gray-700"
               >
-                Please Describe Your Project*
+                Please Describe Your Project
+                <span className="text-red-500">*</span>
               </label>
               <textarea
                 {...register("description")}

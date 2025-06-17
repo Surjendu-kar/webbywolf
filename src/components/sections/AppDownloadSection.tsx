@@ -3,11 +3,11 @@ import Link from "next/link";
 
 const AppDownloadSection = () => {
   return (
-    <section className="relative mb-16 overflow-hidden bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12">
+    <section className="mb-16 overflow-hidden bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 items-end gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Left Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 pb-8 md:pb-0">
             <Link
               href="#"
               className="font-inter text-lg font-semibold text-brand-secondary transition-colors hover:text-brand-primary"
@@ -54,13 +54,13 @@ const AppDownloadSection = () => {
           </div>
 
           {/* Right Content - Phone Image */}
-          <div className="flex h-[500px] justify-center">
+          <div className="flex items-end justify-center">
             <Image
               src="/app-store/phone-mockup.svg"
               alt="App mockup on phone"
               width={500}
               height={500}
-              className="h-auto w-auto md:scale-150"
+              className="scale-140 h-auto w-auto translate-y-6 object-contain md:translate-y-12 md:scale-110 lg:translate-y-0 lg:scale-150"
             />
           </div>
         </div>
