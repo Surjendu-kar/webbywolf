@@ -8,6 +8,7 @@ import BrandSection from "@/components/sections/BrandSection";
 import CardGridSection from "@/components/sections/CardGridSection";
 import FeatureSection from "@/components/sections/FeatureSection";
 import HeroSection from "@/components/sections/HeroSection";
+import NoLimitsSection from "@/components/sections/NoLimitsSection";
 import QuoteSection from "@/components/sections/QuoteSection";
 import { Toaster } from "react-hot-toast";
 
@@ -58,6 +59,9 @@ function Home() {
 
       {/* App Download Section */}
       <AppDownloadSection />
+
+      {/* No Limits Section */}
+      <NoLimitsSection />
     </main>
   );
 }
