@@ -1,5 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
+import { Button } from "../ui/button";
+import { ArrowRight } from "lucide-react";
 
 const NoLimitsSection = () => {
   return (
@@ -18,12 +19,10 @@ const NoLimitsSection = () => {
               Lorem ipsum dolor sit amet consectetur. Nisl faucibus vitae
               porttitor quis arcu. Ipsum nullam.
             </p>
-            <Link
-              href="#"
-              className="inline-block font-inter text-lg font-semibold text-brand-secondary hover:text-brand-primary"
-            >
-              Loerum Ipsum →
-            </Link>
+            <Button className="bg-brand-primary px-8 py-2 font-inter font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-secondary hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50">
+              Leorum Ipsum
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
 

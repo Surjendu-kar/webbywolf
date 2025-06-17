@@ -10,6 +10,7 @@ import FeatureSection from "@/components/sections/FeatureSection";
 import HeroSection from "@/components/sections/HeroSection";
 import NoLimitsSection from "@/components/sections/NoLimitsSection";
 import QuoteSection from "@/components/sections/QuoteSection";
+import SimpleSection from "@/components/sections/SimpleSection";
 import { Toaster } from "react-hot-toast";
 
 function Home() {
@@ -62,6 +63,9 @@ function Home() {
 
       {/* No Limits Section */}
       <NoLimitsSection />
+
+      {/* Simple Section */}
+      <SimpleSection />
     </main>
   );
 }
