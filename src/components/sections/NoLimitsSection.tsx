@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const NoLimitsSection = () => {
   return (
-    <section className="container relative mx-auto max-h-[670px] px-4">
+    <section className="container relative mx-auto max-h-[660px] px-4">
       <div className="flex">
         {/* Left Content */}
         <div className="w-[400px]">
@@ -30,12 +30,12 @@ const NoLimitsSection = () => {
         {/* Right Images Section */}
         <div className="flex-1">
           {/* Top left image */}
-          <div className="absolute left-[49%] top-[30px] h-[200px] w-[200px]">
+          <div className="absolute left-[54%] top-[40px] h-[180px] w-[115px]">
             <Image
               src="/motorcycles/night-riders.webp"
               alt="Night motorcycle riders"
               fill
-              className="object-contain"
+              className="object-cover object-left"
             />
           </div>
 
@@ -45,12 +45,12 @@ const NoLimitsSection = () => {
               src="/motorcycles/group-front.webp"
               alt="Motorcycle group front view"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
 
           {/* Middle left image */}
-          <div className="absolute left-[34%] top-[180px] h-[220px] w-[250px]">
+          <div className="absolute left-[38%] top-[180px] h-[200px] w-[250px]">
             <Image
               src="/motorcycles/group-ride.webp"
               alt="Group motorcycle ride"
@@ -60,12 +60,12 @@ const NoLimitsSection = () => {
           </div>
 
           {/* Middle right large image */}
-          <div className="absolute right-[50px] top-[250px] h-[300px] w-[590px]">
+          <div className="absolute right-[50px] top-[230px] h-[300px] w-[540px]">
             <Image
               src="/motorcycles/sunset-riders.webp"
               alt="Sunset motorcycle riders"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
 
@@ -79,7 +79,7 @@ const NoLimitsSection = () => {
                 className="object-contain"
               />
             </div>
-            <div className="bottom-13 relative right-6 h-[200px] w-[450px]">
+            <div className="bottom-13 relative right-2 h-[200px] w-[480px]">
               <Image
                 src="/motorcycles/group-2.webp"
                 alt="Rider gear"
@@ -87,7 +87,7 @@ const NoLimitsSection = () => {
                 className="object-cover"
               />
             </div>
-            <div className="-bottom-25 relative right-5 h-[50px] w-[180px]">
+            <div className="-bottom-18 relative  h-[76px] w-[100px]">
               <Image
                 src="/motorcycles/motorcycles-1.webp"
                 alt="Rider gear"
@@ -95,7 +95,7 @@ const NoLimitsSection = () => {
                 className="object-cover object-center"
               />
             </div>
-            <div className="-bottom-25 relative right-5 h-[50px] w-[390px]">
+            <div className="-bottom-18 relative  h-[76px] w-[420px]">
               <Image
                 src="/motorcycles/motorcycles-3.webp"
                 alt="Rider gear"
