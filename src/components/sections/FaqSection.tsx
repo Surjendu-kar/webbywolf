@@ -43,7 +43,7 @@ const faqData = [
 
 const FaqSection = () => {
   return (
-    <section className="my-20 bg-[#FBFBFB] py-16">
+    <section className="my-20 bg-[#FBFBFB] py-10 lg:py-16">
       <div className="container mx-auto px-4">
         <h1 className="font-roboto-condensed text-3xl font-bold uppercase text-brand-text lg:text-5xl">
           Frequently Asked Questions (FAQs)
@@ -51,22 +51,24 @@ const FaqSection = () => {
         <Accordion
           type="single"
           collapsible
-          className="mt-28 w-full border-t border-gray-200"
+          className="mt-10 w-full border-t border-gray-200 lg:mt-28"
         >
           {faqData.map((faq) => (
             <AccordionItem
               key={faq.value}
               value={faq.value}
-              className="border-b border-gray-200 px-10 py-8"
+              className="border-b border-gray-200 px-2 py-4 lg:px-10 lg:py-8"
             >
               <AccordionTrigger className="group flex w-full items-center justify-between py-0 text-left hover:no-underline [&>svg]:hidden">
-                <span className="text-lg  text-brand-text">{faq.question}</span>
-                <div className="relative flex h-5 w-5 shrink-0 cursor-pointer items-center justify-center">
-                  <Plus className="absolute transition-all duration-200 group-data-[state=open]:opacity-0" />
-                  <Minus className="absolute opacity-0 transition-all duration-200 group-data-[state=open]:opacity-100" />
+                <span className="text-base text-brand-text lg:text-lg">
+                  {faq.question}
+                </span>
+                <div className="relative flex  shrink-0 cursor-pointer items-center justify-center ">
+                  <Plus className="absolute h-4 w-4 transition-all duration-200 group-data-[state=open]:opacity-0 lg:h-5 lg:w-5" />
+                  <Minus className="absolute h-4 w-4 opacity-0 transition-all duration-200 group-data-[state=open]:opacity-100 lg:h-5 lg:w-5" />
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="max-w-xl  pt-4 text-gray-600">
+              <AccordionContent className="lg:text-md max-w-xl  pt-4 text-sm text-gray-600">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
