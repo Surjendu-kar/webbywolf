@@ -1,10 +1,10 @@
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { ArrowRight } from "lucide-react";
 
 const NoLimitsSection = () => {
   return (
-    <section className="container relative mx-auto h-[660px] px-4">
+    <section className="container relative mx-auto h-[660px] px-4 lg:px-0">
       <div className="flex">
         {/* Left Content */}
         <div className="w-[400px]">
@@ -29,7 +29,7 @@ const NoLimitsSection = () => {
         {/* Right Images Section */}
         <div className="flex-1">
           {/* Top left image */}
-          <div className="absolute left-[54%] top-[40px] h-[180px] w-[115px]">
+          <div className="right-106 absolute top-[40px] h-[180px] w-[115px]">
             <Image
               src="/motorcycles/night-riders.webp"
               alt="Night motorcycle riders"
@@ -39,7 +39,7 @@ const NoLimitsSection = () => {
           </div>
 
           {/* Top right image */}
-          <div className="absolute right-[50px] top-0 h-[230px] w-[400px]">
+          <div className="absolute right-0 top-0 h-[230px] w-[400px]">
             <Image
               src="/motorcycles/group-front.webp"
               alt="Motorcycle group front view"
@@ -49,7 +49,7 @@ const NoLimitsSection = () => {
           </div>
 
           {/* Middle left image */}
-          <div className="absolute left-[38%] top-[180px] h-[200px] w-[250px]">
+          <div className="right-123 absolute top-[180px] h-[200px] w-[250px]">
             <Image
               src="/motorcycles/group-ride.webp"
               alt="Group motorcycle ride"
@@ -59,7 +59,7 @@ const NoLimitsSection = () => {
           </div>
 
           {/* Middle right large image */}
-          <div className="absolute right-[50px] top-[230px] h-[300px] w-[540px]">
+          <div className="absolute right-0 top-[230px] h-[300px] w-[540px]">
             <Image
               src="/motorcycles/sunset-riders.webp"
               alt="Sunset motorcycle riders"
@@ -69,7 +69,7 @@ const NoLimitsSection = () => {
           </div>
 
           {/* Bottom row images */}
-          <div className="absolute bottom-0 left-0 flex gap-4">
+          <div className="absolute bottom-0 right-0 flex gap-4">
             <div className="relative bottom-0.5 h-[150px] w-[180px]">
               <Image
                 src="/motorcycles/group-1.webp"
