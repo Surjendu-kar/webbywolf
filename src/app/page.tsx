@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import AppDownloadSection from "@/components/sections/AppDownloadSection";
 import Banner from "@/components/sections/Banner";
 import BenefitsSection from "@/components/sections/BenefitsSection";
+import BottomSection from "@/components/sections/BottomSection";
 import BrandSection from "@/components/sections/BrandSection";
 import CardGridSection from "@/components/sections/CardGridSection";
 import DoubleImageSection from "@/components/sections/DoubleImageSection";
@@ -86,6 +87,9 @@ function Home() {
 
       {/* FAQ Section */}
       <FaqSection />
+
+      {/* Bottom Hero Section */}
+      <BottomSection />
     </main>
   );
 }

@@ -43,7 +43,7 @@ const faqData = [
 
 const FaqSection = () => {
   return (
-    <section className="my-20 bg-[#FBFBFB] py-10 lg:py-16">
+    <section className="my-10 bg-[#FBFBFB] py-10 lg:my-20 lg:py-16">
       <div className="container mx-auto px-4">
         <h1 className="font-roboto-condensed text-3xl font-bold uppercase text-brand-text lg:text-5xl">
           Frequently Asked Questions (FAQs)
