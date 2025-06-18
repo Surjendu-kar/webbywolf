@@ -13,6 +13,7 @@ import NoLimitsSection from "@/components/sections/NoLimitsSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import QuoteSection from "@/components/sections/QuoteSection";
 import SimpleSection from "@/components/sections/SimpleSection";
+import SliderSection from "@/components/sections/SliderSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 import { Toaster } from "react-hot-toast";
 
@@ -78,6 +79,9 @@ function Home() {
 
       {/* Double Image Section */}
       <DoubleImageSection />
+
+      {/* Slider Section */}
+      <SliderSection />
     </main>
   );
 }
