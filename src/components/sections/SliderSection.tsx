@@ -34,6 +34,20 @@ const SliderSection = () => {
       description:
         "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud libero, id netus tincidunt...",
     },
+    {
+      id: 4,
+      image: "/motorcycles/rider.webp",
+      title: "Professional Rider",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Malesuada tristique libero, id netus tincidunt. Egestas ac arcu amet nisl quis estlibero, id netus tincidunt...",
+    },
+    {
+      id: 5,
+      image: "/motorcycles/sunset-riders.webp",
+      title: "Sunset Adventurers",
+      description:
+        "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud libero, id netus tincidunt...",
+    },
   ];
 
   return (
@@ -81,7 +95,7 @@ const SliderSection = () => {
       </div>
 
       {/* Navigation Dots */}
-      <div className="mt-8 flex justify-center gap-2 lg:mt-0">
+      <div className="mt-8 flex justify-center gap-1 lg:mt-0">
         {slides.map((slide, index) => (
           <button
             key={slide.id}
@@ -89,7 +103,7 @@ const SliderSection = () => {
             className={`h-2 w-2 cursor-pointer rounded-full transition-all duration-300 ${
               index === currentSlide
                 ? "w-8 bg-brand-primary"
-                : "bg-gray-300 hover:bg-gray-400"
+                : "bg-[#80B0ED] hover:scale-110"
             }`}
             aria-label={`Go to slide ${slide.id}`}
           />
