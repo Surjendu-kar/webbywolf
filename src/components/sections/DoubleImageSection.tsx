@@ -5,21 +5,11 @@ import GradientBar from "../ui/GradientBar";
 
 const DoubleImageSection = () => {
   return (
-    <section className="relative  my-56 bg-[#F8F8F8]">
+    <section className="relative my-16 bg-[#F8F8F8] lg:my-56">
       {/* Main content box */}
-      <div className="container relative mx-auto  pt-16 lg:h-[724px]">
-        {/* Top right image - positioned outside the box */}
-        <div className="absolute -top-24 right-0 h-[570px] w-[570px]  lg:-top-32">
-          <Image
-            src="/bike-booking.webp"
-            alt="Business discussion"
-            fill
-            className="object-cover"
-          />
-        </div>
-
+      <div className="container relative mx-auto  h-full pt-4 lg:h-[724px] lg:pt-16">
         {/* Content container */}
-        <div className="w-full space-y-6 py-8 lg:w-1/2">
+        <div className="w-full space-y-6 px-4 py-8 lg:w-1/2 lg:px-0 lg:py-0">
           <h1 className="font-roboto-condensed text-3xl font-bold text-brand-secondary lg:text-5xl">
             LOREM IPSUM DOLOR SIT AMET CONSECTETUR. DIGNISSIM TELLUS.
           </h1>
@@ -39,9 +29,19 @@ const DoubleImageSection = () => {
           </Button>
         </div>
 
+        {/* Top right image - positioned outside the box */}
+        <div className="relative -top-0 right-0 h-[600px] w-full lg:absolute lg:-top-32 lg:h-[570px]  lg:w-[570px]">
+          <Image
+            src="/bike-booking.webp"
+            alt="Business discussion"
+            fill
+            className="object-cover"
+          />
+        </div>
+
         {/* Bottom content box with image */}
-        <div className="-bottom-30 absolute left-0 w-[546px] shadow-lg">
-          <div className="space-y-6 bg-white p-8">
+        <div className="lg:-bottom-30 relative bottom-0 left-0 w-full shadow-none lg:absolute lg:w-[546px] lg:shadow-lg">
+          <div className="space-y-6 bg-white p-4 lg:p-8">
             <h2 className="text-xl font-medium text-gray-900">
               Lorem ipsum dolor sit
             </h2>
@@ -63,7 +63,7 @@ const DoubleImageSection = () => {
         </div>
       </div>
 
-      <div className="w-[90%]">
+      <div className="w-full lg:w-[90%]">
         <GradientBar />
       </div>
     </section>
