@@ -35,9 +35,9 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="container mx-auto my-20 flex flex-col gap-8 px-4 lg:flex-row lg:items-center lg:gap-16">
+    <section className="container mx-auto my-20 flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16">
       {/* Left Content */}
-      <div className="flex-1 space-y-6 lg:space-y-8">
+      <div className="flex-1 space-y-6 px-4 lg:space-y-8 lg:px-0">
         <h1 className="font-roboto-condensed text-3xl font-bold text-brand-text sm:text-4xl lg:text-5xl">
           LOREM IPSUM DOLOR SIT AMET
         </h1>

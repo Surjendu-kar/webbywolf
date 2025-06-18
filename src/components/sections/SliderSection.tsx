@@ -34,17 +34,16 @@ const SliderSection = () => {
       description:
         "Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud libero, id netus tincidunt...",
     },
-    // Add more slides as needed
   ];
 
   return (
     <section className="container mx-auto my-20">
       {/* Header */}
-      <div className="text-center">
+      <div className="px-4 text-left lg:px-0 lg:text-center">
         <h1 className="font-roboto-condensed text-3xl font-bold text-brand-text lg:text-5xl">
           LOREM IPSUM DOLOR SIT AMET
         </h1>
-        <p className="mt-6 text-center text-gray-600">
+        <p className="mt-6  text-gray-600">
           Aliquet sed nulla tincidunt pulvinar sed fames sit facilisis dictumst.
           Ornare faucibus quis velit fringilla aliquam ultricies. Malesuada ut
           aliquam at ac est nisi, interdum etiam dignissim. Sed ut vestibulum
@@ -53,10 +52,10 @@ const SliderSection = () => {
       </div>
 
       {/* Slider Container */}
-      <div className="relative mx-auto flex items-center justify-between py-20">
+      <div className="relative mx-auto flex flex-col items-center justify-center gap-8 py-10 lg:flex-row lg:justify-start lg:gap-0 lg:py-20">
         {/* Image Container */}
-        <div className="w-[680px]">
-          <div className="relative h-[400px]">
+        <div className="w-full  lg:w-[680px] ">
+          <div className="relative h-[300px]  lg:h-[400px]">
             <Image
               src={slides[currentSlide].image}
               alt={slides[currentSlide].title}
@@ -67,11 +66,11 @@ const SliderSection = () => {
         </div>
 
         {/* Content Box */}
-        <div className="relative -left-20 flex h-[264px] w-[680px] flex-col justify-center rounded-sm bg-white px-10 shadow-lg">
-          <h2 className="text-2xl font-bold text-brand-text">
+        <div className="relative -mt-16 flex w-11/12 flex-col justify-center rounded-sm bg-white p-6 shadow-lg md:p-10 lg:-left-20 lg:mt-0 lg:w-[680px]">
+          <h2 className="text-xl font-bold text-brand-text md:text-2xl">
             {slides[currentSlide].title}
           </h2>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-4 text-sm text-gray-600 md:text-base">
             {slides[currentSlide].description}
           </p>
           <button className="mt-6 flex items-center text-brand-primary hover:text-brand-secondary">
@@ -82,7 +81,7 @@ const SliderSection = () => {
       </div>
 
       {/* Navigation Dots */}
-      <div className="flex justify-center gap-2">
+      <div className="mt-8 flex justify-center gap-2 lg:mt-0">
         {slides.map((slide, index) => (
           <button
             key={slide.id}
