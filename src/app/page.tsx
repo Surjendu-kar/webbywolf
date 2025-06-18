@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import AppDownloadSection from "@/components/sections/AppDownloadSection";
 import Banner from "@/components/sections/Banner";
@@ -90,6 +91,8 @@ function Home() {
 
       {/* Bottom Hero Section */}
       <BottomSection />
+
+      <Footer />
     </main>
   );
 }
