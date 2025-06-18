@@ -1,3 +1,4 @@
+"use client";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";

@@ -1,7 +1,3 @@
-"use client";
-
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
 import AppDownloadSection from "@/components/sections/AppDownloadSection";
 import Banner from "@/components/sections/Banner";
 import BenefitsSection from "@/components/sections/BenefitsSection";
