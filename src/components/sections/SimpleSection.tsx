@@ -14,7 +14,7 @@ const SimpleSection = () => {
   ];
 
   return (
-    <section className=" mr:0 relative my-10  bg-[#F8F8F8] lg:my-28 lg:mr-28">
+    <section className=" mr:0 relative my-10  bg-[#F8F8F8] lg:my-36 lg:mr-28">
       <div className=" mx-auto flex flex-col justify-between gap-6 p-0 lg:flex-row lg:py-16  lg:pr-16">
         {/* Left Content - Image */}
         <div className="lg:-top-30 relative bottom-0 h-[400px] w-full md:h-[450px] lg:h-[550px] lg:w-[550px]">
