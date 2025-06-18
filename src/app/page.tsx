@@ -6,6 +6,7 @@ import Banner from "@/components/sections/Banner";
 import BenefitsSection from "@/components/sections/BenefitsSection";
 import BrandSection from "@/components/sections/BrandSection";
 import CardGridSection from "@/components/sections/CardGridSection";
+import DoubleImageSection from "@/components/sections/DoubleImageSection";
 import FeatureSection from "@/components/sections/FeatureSection";
 import HeroSection from "@/components/sections/HeroSection";
 import NoLimitsSection from "@/components/sections/NoLimitsSection";
@@ -74,6 +75,9 @@ function Home() {
 
       {/* Process Section */}
       <ProcessSection />
+
+      {/* Double Image Section */}
+      <DoubleImageSection />
     </main>
   );
 }
