@@ -41,7 +41,14 @@ const DoubleImageSection = () => {
 
         {/* Bottom content box with image */}
         <div className="lg:-bottom-30 relative bottom-0 left-0 w-full shadow-none lg:absolute lg:w-[546px] lg:shadow-lg">
-          <div className="space-y-3 bg-white p-4 lg:space-y-6 lg:p-8">
+          <div className="relative space-y-3 bg-white p-4 lg:space-y-6 lg:p-8">
+            <Image
+              src="/pin.svg"
+              alt="pin"
+              width={30}
+              height={30}
+              className="absolute right-4 top-4"
+            />
             <h2 className="text-xl font-medium text-gray-900">
               Lorem ipsum dolor sit
             </h2>

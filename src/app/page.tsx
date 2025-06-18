@@ -7,6 +7,7 @@ import BenefitsSection from "@/components/sections/BenefitsSection";
 import BrandSection from "@/components/sections/BrandSection";
 import CardGridSection from "@/components/sections/CardGridSection";
 import DoubleImageSection from "@/components/sections/DoubleImageSection";
+import FaqSection from "@/components/sections/FaqSection";
 import FeatureSection from "@/components/sections/FeatureSection";
 import HeroSection from "@/components/sections/HeroSection";
 import NoLimitsSection from "@/components/sections/NoLimitsSection";
@@ -82,6 +83,9 @@ function Home() {
 
       {/* Slider Section */}
       <SliderSection />
+
+      {/* FAQ Section */}
+      <FaqSection />
     </main>
   );
 }
