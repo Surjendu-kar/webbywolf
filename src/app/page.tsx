@@ -9,6 +9,7 @@ import CardGridSection from "@/components/sections/CardGridSection";
 import FeatureSection from "@/components/sections/FeatureSection";
 import HeroSection from "@/components/sections/HeroSection";
 import NoLimitsSection from "@/components/sections/NoLimitsSection";
+import ProcessSection from "@/components/sections/ProcessSection";
 import QuoteSection from "@/components/sections/QuoteSection";
 import SimpleSection from "@/components/sections/SimpleSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
@@ -70,6 +71,9 @@ function Home() {
 
       {/* Testimonial Section */}
       <TestimonialSection />
+
+      {/* Process Section */}
+      <ProcessSection />
     </main>
   );
 }
