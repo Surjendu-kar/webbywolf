@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 const BottomSection = () => {
   return (
-    <section className="container mx-auto flex flex-col  items-center justify-center gap-5 py-10 lg:py-20 ">
+    <section className="container mx-auto flex flex-col  items-center justify-center gap-5 py-10 lg:py-20">
       {/* Logo */}
       <div className=" flex-shrink-0 bg-[#DBDBDB] px-4 py-2 md:px-6 lg:px-8">
         <span className="font-roboto-condensed text-xl font-bold text-brand-text md:text-2xl lg:text-3xl">

@@ -27,7 +27,7 @@ function Home() {
   ];
 
   return (
-    <main className="min-h-screen">
+    <main className="mx-auto min-h-screen max-w-[1536px]">
       <Toaster position="top-center" />
 
       {/* Header with transparent background */}

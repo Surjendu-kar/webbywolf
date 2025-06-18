@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Check } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 const HeroSection = () => {
   const [email, setEmail] = useState("");
@@ -24,7 +24,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-white">
+    <section className="relative flex  items-center justify-center overflow-hidden bg-white">
       {/* Content */}
       <div className="relative z-10 w-full pt-16 md:pt-20 lg:pt-0">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-20">
@@ -89,8 +89,8 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Motorcycle Image */}
-          <div className="relative">
-            <div className="relative h-[50vh] w-full md:h-[80vh] lg:h-[100vh]">
+          <div className="relative h-full w-full">
+            <div className="relative h-[400px] w-full sm:h-[500px] md:h-[600px] lg:h-screen lg:max-h-[900px]">
               <Image
                 src="/motorcycles/night-riders.webp"
                 alt="Motorcycle rider"
