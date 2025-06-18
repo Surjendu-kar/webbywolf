@@ -30,9 +30,6 @@ function Home() {
     <main className="mx-auto min-h-screen max-w-[1536px]">
       <Toaster position="top-center" />
 
-      {/* Header with transparent background */}
-      <Header />
-
       {/* Hero Section */}
       <HeroSection />
 
@@ -91,8 +88,6 @@ function Home() {
 
       {/* Bottom Hero Section */}
       <BottomSection />
-
-      <Footer />
     </main>
   );
 }
