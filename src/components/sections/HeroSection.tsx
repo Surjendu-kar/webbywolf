@@ -2,31 +2,56 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { Check } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+import * as yup from "yup";
+
+// Form validation schema
+const schema = yup.object().shape({
+  email: yup
+    .string()
+    .email("Please enter a valid email")
+    .required("Email is required"),
+});
+
+type FormData = yup.InferType<typeof schema>;
 
 const HeroSection = () => {
-  const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<FormData>({
+    resolver: yupResolver(schema),
+  });
+
+  const onSubmit = async (data: FormData) => {
+    try {
+      // Simulate API call with timeout
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      console.log("Newsletter signup:", data.email);
+      toast.success("Successfully subscribed");
       setIsSubmitted(true);
-      // Here you would typically send the email to your backend
-      console.log("Newsletter signup:", email);
+      reset();
       setTimeout(() => {
         setIsSubmitted(false);
-        setEmail("");
       }, 3000);
+    } catch {
+      toast.error("Something went wrong. Please try again.");
     }
   };
 
   return (
-    <section className="relative flex  items-center justify-center overflow-hidden bg-white">
+    <section className="relative flex items-center justify-center overflow-hidden bg-white">
       {/* Content */}
-      <div className="relative z-10 w-full pt-20  lg:pt-0">
+      <div className="relative z-10 w-full pt-20 lg:pt-0">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-20">
           {/* Left Content */}
           <div className="space-y-8 px-4 text-center lg:pl-28 lg:text-left">
@@ -47,29 +72,36 @@ const HeroSection = () => {
             {/* Newsletter Form */}
             <div className="animate-slide-up space-y-4">
               <form
-                onSubmit={handleSubmit}
+                onSubmit={handleSubmit(onSubmit)}
                 className="mx-auto flex max-w-md flex-col gap-4 sm:flex-row lg:mx-0"
               >
                 <div className="flex-1">
                   <Input
+                    {...register("email")}
                     type="email"
                     placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="h-12 border-gray-300 bg-white text-brand-text placeholder:text-gray-500 focus:border-brand-primary"
+                    className={`h-12 border-gray-300 bg-white text-brand-text placeholder:text-gray-500 focus:border-brand-primary ${
+                      errors.email ? "border-red-500" : ""
+                    }`}
                   />
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.email.message}
+                    </p>
+                  )}
                 </div>
                 <Button
                   type="submit"
-                  disabled={isSubmitted}
+                  disabled={isSubmitting || isSubmitted}
                   className="h-12 bg-brand-primary px-8 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-secondary hover:shadow-lg disabled:opacity-50"
                 >
                   {isSubmitted ? (
                     <span className="flex items-center gap-2">
-                      <Check className="h-4 w-4" />
+                      {/* <Check className="h-4 w-4" /> */}
                       Submitted
                     </span>
+                  ) : isSubmitting ? (
+                    "Submitting..."
                   ) : (
                     "Submit"
                   )}
