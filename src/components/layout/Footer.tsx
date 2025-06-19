@@ -44,8 +44,8 @@ const Footer = () => {
     <footer className="mt-10 bg-[#1B1F24] px-4 py-10 lg:mt-20 lg:px-0">
       <div className="container mx-auto flex flex-col gap-8 lg:gap-0">
         {/* Logo */}
-        <div className="inline-flex max-w-24 justify-center bg-[#DBDBDB] px-4 py-2 md:max-w-28 md:px-6 lg:max-w-36 lg:px-8">
-          <span className="font-roboto-condensed text-xl font-bold text-brand-text md:text-2xl">
+        <div className="inline-flex max-w-24 justify-center bg-[#DBDBDB] px-4 py-2 md:max-w-28 md:px-6 lg:max-w-32 lg:px-8">
+          <span className="font-roboto-condensed text-xl font-bold text-brand-text md:text-3xl">
             LOGO
           </span>
         </div>
