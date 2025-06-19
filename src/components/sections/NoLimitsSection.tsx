@@ -4,8 +4,8 @@ import { Button } from "../ui/button";
 
 const NoLimitsSection = () => {
   return (
-    <section className="container relative mx-auto h-[680px] px-4 lg:px-0">
-      <div className="flex">
+    <section className="container relative mx-auto my-16 h-[680px] overflow-hidden lg:my-20">
+      <div className="flex px-4 lg:px-0">
         {/* Left Content */}
         <div className="w-[400px]">
           <div className="space-y-6">
@@ -29,7 +29,7 @@ const NoLimitsSection = () => {
         {/* Right Images Section */}
         <div className="flex-1">
           {/* Top left image */}
-          <div className="right-120 absolute top-[30px] h-[210px] w-[140px]">
+          <div className="lg:right-120 right-71 md:right-85 absolute top-60 h-[150px] w-[150px] md:h-[150px] md:w-[130px] lg:top-[30px] lg:h-[210px] lg:w-[140px]">
             <Image
               src="/motorcycles/night-riders.webp"
               alt="Night motorcycle riders"
@@ -39,27 +39,27 @@ const NoLimitsSection = () => {
           </div>
 
           {/* Top right image */}
-          <div className="absolute right-0 top-0 h-[240px] w-[460px]">
+          <div className="absolute right-0 top-60 h-[150px] w-[280px] md:h-[150px] md:w-[330px] lg:top-0 lg:h-[240px] lg:w-[460px]">
             <Image
               src="/motorcycles/group-front.webp"
               alt="Motorcycle group front view"
               fill
-              className="object-contain"
+              className="object-cover"
             />
           </div>
 
           {/* Middle left image */}
-          <div className="right-160 absolute top-[180px] h-[240px] w-[135px]">
+          <div className="lg:right-160 top-98.5 md:top-100 right-78 md:right-103 absolute h-[150px] w-[140px] md:h-[170px] md:w-[130px] lg:top-[180px] lg:h-[240px] lg:w-[135px]">
             <Image
               src="/motorcycles/group-ride.webp"
               alt="Group motorcycle ride"
               fill
-              className="object-contain"
+              className="object-cover"
             />
           </div>
 
           {/* Middle right large image */}
-          <div className="absolute right-0 top-[255px] h-[320px] w-[620px]">
+          <div className="top-98.5 md:top-100 absolute right-0 h-[150px] w-[310px] md:h-[170px] md:w-[400px] lg:top-[255px] lg:h-[320px] lg:w-[620px]">
             <Image
               src="/motorcycles/sunset-riders.webp"
               alt="Sunset motorcycle riders"
@@ -69,8 +69,8 @@ const NoLimitsSection = () => {
           </div>
 
           {/* Bottom row images */}
-          <div className="absolute bottom-0 right-0 flex items-end  gap-4">
-            <div className="relative bottom-0 right-4 h-[150px] w-[125px]">
+          <div className="absolute bottom-0 right-0 flex items-end gap-4">
+            <div className="relative -right-9 bottom-3 h-[120px] w-[100px] md:h-[90px] md:w-[112px] lg:bottom-0 lg:right-4 lg:h-[150px] lg:w-[125px]">
               <Image
                 src="/motorcycles/group-1.webp"
                 alt="Motorcycle parts"
@@ -78,7 +78,7 @@ const NoLimitsSection = () => {
                 className="object-cover"
               />
             </div>
-            <div className="relative bottom-0 right-1.5 h-[240px] w-[460px]">
+            <div className="relative -right-6 bottom-3 h-[120px] w-[180px] md:h-[90px] md:w-[320px] lg:bottom-0 lg:right-1.5 lg:h-[240px] lg:w-[460px]">
               <Image
                 src="/motorcycles/group-2.webp"
                 alt="Rider gear"
@@ -86,7 +86,7 @@ const NoLimitsSection = () => {
                 className="object-cover"
               />
             </div>
-            <div className="relative bottom-0  h-[80px] w-[138px]">
+            <div className="relative -right-3 bottom-3 h-[120px] w-[70px] md:h-[90px] md:w-[104px] lg:bottom-0 lg:right-0 lg:h-[80px] lg:w-[138px]">
               <Image
                 src="/motorcycles/motorcycles-1.webp"
                 alt="Rider gear"
@@ -94,7 +94,7 @@ const NoLimitsSection = () => {
                 className="object-cover object-center"
               />
             </div>
-            <div className="relative bottom-0  h-[80px] w-[465px]">
+            <div className="relative bottom-3 h-[120px] w-[70px] md:h-[90px] md:w-[267px] lg:bottom-0 lg:h-[80px] lg:w-[465px]">
               <Image
                 src="/motorcycles/motorcycles-3.webp"
                 alt="Rider gear"
