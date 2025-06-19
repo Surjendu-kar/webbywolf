@@ -1,3 +1,5 @@
+"use client";
+
 import AppDownloadSection from "@/components/sections/AppDownloadSection";
 import Banner from "@/components/sections/Banner";
 import BenefitsSection from "@/components/sections/BenefitsSection";
@@ -14,6 +16,7 @@ import QuoteSection from "@/components/sections/QuoteSection";
 import SimpleSection from "@/components/sections/SimpleSection";
 import SliderSection from "@/components/sections/SliderSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
+import ScrollAnimation from "@/components/ui/ScrollAnimation";
 import { Toaster } from "react-hot-toast";
 
 function Home() {
@@ -23,67 +26,99 @@ function Home() {
   ];
 
   return (
-    <main className="mx-auto min-h-screen max-w-[1536px]">
+    <main className="mx-auto min-h-screen max-w-[1536px] overflow-hidden">
       <Toaster position="top-center" />
 
-      {/* Hero Section */}
+      {/* Hero Section - No animation needed as it's above the fold */}
       <HeroSection />
 
       {/* Feature Section */}
-      <FeatureSection />
+      <ScrollAnimation direction="right">
+        <FeatureSection />
+      </ScrollAnimation>
 
       {/* Benefits Section */}
-      <BenefitsSection />
+      <ScrollAnimation direction="left">
+        <BenefitsSection />
+      </ScrollAnimation>
 
       {/* First Banner */}
-      <Banner
-        backgroundImage="/banner/banner-motorcycle-rain.webp"
-        title="LOREM IPSUM DOLOR SIT AMET CONSECTETUR. QUIS ADIPISCING PURUS EGESTAS ALIQUAM VIVERRA MI."
-        description={bannerDescription}
-      />
+      <ScrollAnimation direction="up">
+        <Banner
+          backgroundImage="/banner/banner-motorcycle-rain.webp"
+          title="LOREM IPSUM DOLOR SIT AMET CONSECTETUR. QUIS ADIPISCING PURUS EGESTAS ALIQUAM VIVERRA MI."
+          description={bannerDescription}
+        />
+      </ScrollAnimation>
 
       {/* Brand Section */}
-      <BrandSection />
+      <ScrollAnimation direction="down">
+        <BrandSection />
+      </ScrollAnimation>
 
       {/* Card Grid Section */}
-      <CardGridSection />
+      <ScrollAnimation direction="right">
+        <CardGridSection />
+      </ScrollAnimation>
 
       {/* Second Banner */}
-      <Banner
-        backgroundImage="/banner/banner-2.webp"
-        title="DOLOR SIT AMET CONSECTETUR. QUIS ADIPISCING PURUS EGESTAS ALIQUAM VIVERRA MI. DOLOR SIT AMET CONSECTETUR. QUIS ADIPISCING"
-        height="h-[600px]"
-      />
+      <ScrollAnimation direction="up">
+        <Banner
+          backgroundImage="/banner/banner-2.webp"
+          title="DOLOR SIT AMET CONSECTETUR. QUIS ADIPISCING PURUS EGESTAS ALIQUAM VIVERRA MI. DOLOR SIT AMET CONSECTETUR. QUIS ADIPISCING"
+          height="h-[600px]"
+        />
+      </ScrollAnimation>
 
       {/* Quote Section */}
-      <QuoteSection />
+      <ScrollAnimation direction="left">
+        <QuoteSection />
+      </ScrollAnimation>
 
       {/* App Download Section */}
-      <AppDownloadSection />
+      <ScrollAnimation direction="right">
+        <AppDownloadSection />
+      </ScrollAnimation>
 
       {/* No Limits Section */}
-      <NoLimitsSection />
+      <ScrollAnimation direction="up">
+        <NoLimitsSection />
+      </ScrollAnimation>
 
       {/* Simple Section */}
-      <SimpleSection />
+      <ScrollAnimation direction="left">
+        <SimpleSection />
+      </ScrollAnimation>
 
       {/* Testimonial Section */}
-      <TestimonialSection />
+      <ScrollAnimation direction="right">
+        <TestimonialSection />
+      </ScrollAnimation>
 
       {/* Process Section */}
-      <ProcessSection />
+      <ScrollAnimation direction="down">
+        <ProcessSection />
+      </ScrollAnimation>
 
       {/* Double Image Section */}
-      <DoubleImageSection />
+      <ScrollAnimation direction="left">
+        <DoubleImageSection />
+      </ScrollAnimation>
 
       {/* Slider Section */}
-      <SliderSection />
+      <ScrollAnimation direction="right">
+        <SliderSection />
+      </ScrollAnimation>
 
       {/* FAQ Section */}
-      <FaqSection />
+      <ScrollAnimation direction="up">
+        <FaqSection />
+      </ScrollAnimation>
 
       {/* Bottom Hero Section */}
-      <BottomSection />
+      <ScrollAnimation direction="down">
+        <BottomSection />
+      </ScrollAnimation>
     </main>
   );
 }
