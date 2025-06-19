@@ -58,7 +58,7 @@ const TestimonialSection = () => {
     const cards = container?.children;
     if (container && cards && cards[index]) {
       const cardWidth = cards[0].getBoundingClientRect().width;
-      const scrollPosition = cardWidth * index; // Add 10% of card width for gap
+      const scrollPosition = cardWidth * index;
       container.scrollTo({
         left: scrollPosition,
         behavior: "smooth",
