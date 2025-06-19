@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const FeatureSection = () => {
   return (
-    <section className="py-0 md:py-24 lg:px-0 lg:pl-28">
+    <section className="py-16 md:py-24 lg:px-0 lg:pl-28">
       <div className="p-0 shadow-2xl lg:p-10 lg:pb-0 lg:pr-14">
         {/* Main content grid */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">

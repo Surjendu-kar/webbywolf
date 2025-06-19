@@ -29,7 +29,7 @@ const NoLimitsSection = () => {
         {/* Right Images Section */}
         <div className="flex-1">
           {/* Top left image */}
-          <div className="lg:right-120 right-71 md:right-85 absolute top-60 h-[150px] w-[150px] md:h-[150px] md:w-[130px] lg:top-[30px] lg:h-[210px] lg:w-[140px]">
+          <div className="lg:right-120 right-71 md:right-85 top-70 absolute h-[150px] w-[120px] md:h-[150px] md:w-[130px] lg:top-[30px] lg:h-[210px] lg:w-[140px]">
             <Image
               src="/motorcycles/night-riders.webp"
               alt="Night motorcycle riders"
@@ -39,7 +39,7 @@ const NoLimitsSection = () => {
           </div>
 
           {/* Top right image */}
-          <div className="absolute right-0 top-60 h-[150px] w-[280px] md:h-[150px] md:w-[330px] lg:top-0 lg:h-[240px] lg:w-[460px]">
+          <div className="top-70 absolute right-0 h-[150px] w-[280px] md:h-[150px] md:w-[330px] lg:top-0 lg:h-[240px] lg:w-[460px]">
             <Image
               src="/motorcycles/group-front.webp"
               alt="Motorcycle group front view"
@@ -49,7 +49,7 @@ const NoLimitsSection = () => {
           </div>
 
           {/* Middle left image */}
-          <div className="lg:right-160 top-98.5 md:top-100 right-78 md:right-103 absolute h-[150px] w-[140px] md:h-[170px] md:w-[130px] lg:top-[180px] lg:h-[240px] lg:w-[135px]">
+          <div className="lg:right-160 top-108.5 md:top-100 right-78 md:right-103 absolute h-[150px] w-[120px] md:h-[170px] md:w-[130px] lg:top-[180px] lg:h-[240px] lg:w-[135px]">
             <Image
               src="/motorcycles/group-ride.webp"
               alt="Group motorcycle ride"
@@ -59,7 +59,7 @@ const NoLimitsSection = () => {
           </div>
 
           {/* Middle right large image */}
-          <div className="top-98.5 md:top-100 absolute right-0 h-[150px] w-[310px] md:h-[170px] md:w-[400px] lg:top-[255px] lg:h-[320px] lg:w-[620px]">
+          <div className="top-108.5 md:top-100 absolute right-0 h-[150px] w-[310px] md:h-[170px] md:w-[400px] lg:top-[255px] lg:h-[320px] lg:w-[620px]">
             <Image
               src="/motorcycles/sunset-riders.webp"
               alt="Sunset motorcycle riders"
@@ -69,8 +69,8 @@ const NoLimitsSection = () => {
           </div>
 
           {/* Bottom row images */}
-          <div className="absolute bottom-0 right-0 flex items-end gap-4">
-            <div className="relative -right-9 bottom-3 h-[120px] w-[100px] md:h-[90px] md:w-[112px] lg:bottom-0 lg:right-4 lg:h-[150px] lg:w-[125px]">
+          <div className="absolute -bottom-7  right-0 flex items-end gap-4 md:bottom-0">
+            <div className="relative -right-9 bottom-0 h-[120px] w-[100px] md:h-[90px] md:w-[112px] lg:right-4 lg:h-[150px] lg:w-[125px]">
               <Image
                 src="/motorcycles/group-1.webp"
                 alt="Motorcycle parts"
@@ -78,7 +78,7 @@ const NoLimitsSection = () => {
                 className="object-cover"
               />
             </div>
-            <div className="relative -right-6 bottom-3 h-[120px] w-[180px] md:h-[90px] md:w-[320px] lg:bottom-0 lg:right-1.5 lg:h-[240px] lg:w-[460px]">
+            <div className="relative -right-6 bottom-0 h-[120px] w-[180px] md:h-[90px] md:w-[320px] lg:right-1.5 lg:h-[240px] lg:w-[460px]">
               <Image
                 src="/motorcycles/group-2.webp"
                 alt="Rider gear"
@@ -86,7 +86,7 @@ const NoLimitsSection = () => {
                 className="object-cover"
               />
             </div>
-            <div className="relative -right-3 bottom-3 h-[120px] w-[70px] md:h-[90px] md:w-[104px] lg:bottom-0 lg:right-0 lg:h-[80px] lg:w-[138px]">
+            <div className="relative -right-3 bottom-0 h-[120px] w-[70px] md:h-[90px] md:w-[104px] lg:right-0 lg:h-[80px] lg:w-[138px]">
               <Image
                 src="/motorcycles/motorcycles-1.webp"
                 alt="Rider gear"
@@ -94,7 +94,7 @@ const NoLimitsSection = () => {
                 className="object-cover object-center"
               />
             </div>
-            <div className="relative bottom-3 h-[120px] w-[70px] md:h-[90px] md:w-[267px] lg:bottom-0 lg:h-[80px] lg:w-[465px]">
+            <div className="relative bottom-0 h-[120px] w-[70px] md:h-[90px] md:w-[267px] lg:h-[80px] lg:w-[465px]">
               <Image
                 src="/motorcycles/motorcycles-3.webp"
                 alt="Rider gear"

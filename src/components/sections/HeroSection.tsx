@@ -26,7 +26,7 @@ const HeroSection = () => {
   return (
     <section className="relative flex  items-center justify-center overflow-hidden bg-white">
       {/* Content */}
-      <div className="relative z-10 w-full pt-16 md:pt-20 lg:pt-0">
+      <div className="relative z-10 w-full pt-20  lg:pt-0">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-20">
           {/* Left Content */}
           <div className="space-y-8 px-4 text-center lg:pl-28 lg:text-left">

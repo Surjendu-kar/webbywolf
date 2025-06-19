@@ -43,7 +43,7 @@ const Banner = ({
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="container mx-auto p-4 text-center text-white lg:p-0">
           <div className="mx-auto space-y-6">
-            <h1 className="font-roboto-condensed text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-5xl">
+            <h1 className="font-roboto-condensed  text-2xl font-bold leading-tight text-white md:text-5xl lg:text-5xl">
               {title}
             </h1>
             {description && (
