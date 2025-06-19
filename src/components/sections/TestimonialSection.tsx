@@ -54,18 +54,16 @@ const TestimonialSection = () => {
 
   const handleCardSelect = (index: number) => {
     setSelectedCard(index);
-    // Add small delay to allow for state update
-    setTimeout(() => {
-      const container = scrollContainerRef.current;
-      const selectedElement = container?.children[index];
-      if (selectedElement) {
-        selectedElement.scrollIntoView({
-          behavior: "smooth",
-          block: "nearest",
-          inline: "center",
-        });
-      }
-    }, 0);
+    const container = scrollContainerRef.current;
+    const cards = container?.children;
+    if (container && cards && cards[index]) {
+      const cardWidth = cards[0].getBoundingClientRect().width;
+      const scrollPosition = cardWidth * index; // Add 10% of card width for gap
+      container.scrollTo({
+        left: scrollPosition,
+        behavior: "smooth",
+      });
+    }
   };
 
   const handlePrevious = () => {
@@ -104,17 +102,17 @@ const TestimonialSection = () => {
           </div>
         </div>
 
-        <div className="relative flex w-full items-center justify-start gap-6  lg:justify-center">
+        <div className="relative flex w-full items-center justify-start gap-6">
           <div
-            className="scrollbar-hide flex items-center gap-6 overflow-x-auto pl-5 pr-6"
             ref={scrollContainerRef}
+            className="scrollbar-hide flex items-center gap-6 overflow-x-auto scroll-smooth pl-5 pr-6"
           >
             {testimonials.map((testimonial, index) => (
               <div key={testimonial.id} className="py-8">
                 <Card
                   className={`flex h-[350px] w-[300px] shrink-0 cursor-pointer flex-col justify-center border-none bg-white transition-all duration-300 lg:h-[400px] lg:w-[364px] ${
                     index === selectedCard
-                      ? "z-10 scale-110 shadow-xl"
+                      ? "z-10 scale-110 shadow-md"
                       : "scale-100 hover:scale-105"
                   }`}
                   onClick={() => handleCardSelect(index)}
