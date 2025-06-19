@@ -4,8 +4,8 @@ import { Button } from "../ui/button";
 
 const NoLimitsSection = () => {
   return (
-    <section className="container relative mx-auto my-16 h-[680px] overflow-hidden lg:my-20">
-      <div className="flex px-4 lg:px-0">
+    <section className="h-[750px] overflow-hidden bg-[#F1F5F9] pt-10 lg:h-[765px] lg:pt-20">
+      <div className="container relative mx-auto flex px-4 lg:px-0 ">
         {/* Left Content */}
         <div className="w-[400px]">
           <div className="space-y-6">
@@ -49,7 +49,7 @@ const NoLimitsSection = () => {
           </div>
 
           {/* Middle left image */}
-          <div className="lg:right-160 top-108.5 md:top-100 right-78 md:right-103 absolute h-[150px] w-[120px] md:h-[170px] md:w-[130px] lg:top-[180px] lg:h-[240px] lg:w-[135px]">
+          <div className="lg:right-160 top-108.5 md:top-109 right-78 md:right-103 absolute h-[150px] w-[120px] md:h-[150px] md:w-[130px] lg:top-[180px] lg:h-[240px] lg:w-[135px]">
             <Image
               src="/motorcycles/group-ride.webp"
               alt="Group motorcycle ride"
@@ -59,7 +59,7 @@ const NoLimitsSection = () => {
           </div>
 
           {/* Middle right large image */}
-          <div className="top-108.5 md:top-100 absolute right-0 h-[150px] w-[310px] md:h-[170px] md:w-[400px] lg:top-[255px] lg:h-[320px] lg:w-[620px]">
+          <div className="top-108.5 md:top-109 absolute right-0 h-[150px] w-[310px] md:h-[150px] md:w-[400px] lg:top-[255px] lg:h-[320px] lg:w-[620px]">
             <Image
               src="/motorcycles/sunset-riders.webp"
               alt="Sunset motorcycle riders"
@@ -69,7 +69,7 @@ const NoLimitsSection = () => {
           </div>
 
           {/* Bottom row images */}
-          <div className="absolute -bottom-7  right-0 flex items-end gap-4 md:bottom-0">
+          <div className="md:-bottom-100 -bottom-112  absolute right-0 flex items-end gap-4">
             <div className="relative -right-9 bottom-0 h-[120px] w-[100px] md:h-[90px] md:w-[112px] lg:right-4 lg:h-[150px] lg:w-[125px]">
               <Image
                 src="/motorcycles/group-1.webp"
